@@ -6,6 +6,10 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		642CD0B22CE1E500006FF141 /* Inject in Frameworks */ = {isa = PBXBuildFile; productRef = 642CD0B12CE1E500006FF141 /* Inject */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXFileReference section */
 		642CD0982CE1E3CF006FF141 /* MoodTracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MoodTracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -36,6 +40,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				642CD0B22CE1E500006FF141 /* Inject in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -78,6 +83,7 @@
 			);
 			name = MoodTracker;
 			packageProductDependencies = (
+				642CD0B12CE1E500006FF141 /* Inject */,
 			);
 			productName = MoodTracker;
 			productReference = 642CD0982CE1E3CF006FF141 /* MoodTracker.app */;
@@ -107,6 +113,9 @@
 			);
 			mainGroup = 642CD08F2CE1E3CF006FF141;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				642CD0B02CE1E500006FF141 /* XCRemoteSwiftPackageReference "Inject" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 642CD0992CE1E3CF006FF141 /* Products */;
 			projectDirPath = "";
@@ -249,6 +258,10 @@
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
+				OTHER_LDFLAGS = (
+					"-Xlinker",
+					"-interposable",
+				);
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -305,6 +318,7 @@
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
+				OTHER_LDFLAGS = "";
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				VALIDATE_PRODUCT = YES;
@@ -333,6 +347,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		642CD0B02CE1E500006FF141 /* XCRemoteSwiftPackageReference "Inject" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/krzysztofzablocki/Inject";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.5.2;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		642CD0B12CE1E500006FF141 /* Inject */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 642CD0B02CE1E500006FF141 /* XCRemoteSwiftPackageReference "Inject" */;
+			productName = Inject;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 642CD0902CE1E3CF006FF141 /* Project object */;
 }
